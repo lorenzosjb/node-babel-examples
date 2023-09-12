@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel ./src --out-dir ./build --config-file ./.babelrc",
+    "execute": "npx babel-node ./src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.17",
     "@babel/node": "^7.22.15",
+    "@babel/plugin-transform-optional-chaining": "^7.22.15",
     "@babel/preset-env": "^7.22.15"
   }
 }
