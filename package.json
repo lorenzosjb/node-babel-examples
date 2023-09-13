@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx babel ./src --out-dir ./build --config-file ./.babelrc",
-    "execute": "npx babel-node ./src/index.js"
+    "solo": "npx babel-node ./src/index.js",
+    "webapi": "npx babel-node ./src/api/server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +19,9 @@
     "@babel/node": "^7.22.15",
     "@babel/plugin-transform-optional-chaining": "^7.22.15",
     "@babel/preset-env": "^7.22.15"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "node-fetch": "^3.3.2"
   }
 }
