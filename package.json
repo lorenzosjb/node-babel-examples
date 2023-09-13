@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx babel ./src --out-dir ./build --config-file ./.babelrc",
     "solo": "npx babel-node ./src/index.js",
-    "webapi": "npx babel-node ./src/api/server.js"
+    "webapi": "npx babel-node ./src/api/server.js",
+    "test:mocha": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register",
+    "test:mocha:watch": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --watch",
+    "coverage": "nyc --reporter=lcov --reporter --reporter=text npm run test"
   },
   "keywords": [],
   "author": "",
